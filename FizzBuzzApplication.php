@@ -35,8 +35,7 @@ class FizzBuzzApplication
      */
     public function run(array $data)
     {
-        foreach ($data as $dividend)
-        {
+        foreach ($data as $dividend) {
             echo $this->getValue($dividend)."\n";
         }
     }
@@ -47,10 +46,8 @@ class FizzBuzzApplication
      */
     private function getValue($dividend)
     {
-        foreach ($this->specs as $key => $spec)
-        {
-            if ($spec->isSatisfiedBy($dividend))
-            {
+        foreach ($this->specs as $key => $spec) {
+            if ($spec->isSatisfiedBy($dividend)) {
                 return $this->messages[$key];
             }
         }

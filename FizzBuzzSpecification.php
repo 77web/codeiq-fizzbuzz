@@ -5,10 +5,16 @@ namespace CodeIQ;
 class FizzBuzzSpecification
 {
     /**
+     * @var int
+     */
+    private $divisor;
+
+    /**
      * @param int $divisor
      */
     public function __construct($divisor)
     {
+        $this->divisor = $divisor;
     }
 
     /**
@@ -17,5 +23,6 @@ class FizzBuzzSpecification
      */
     public function isSatisfiedBy($dividend)
     {
+        return 0 === $dividend % $this->divisor;
     }
 }
